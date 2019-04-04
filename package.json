@@ -1,0 +1,20 @@
+{
+  "name": "standard-project",
+  "version": "1.0.0",
+  "description": "Standard project workflow.",
+  "homepage": "https://github.com/afeiship/standard-project",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "./.bin/deploy.sh"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/core": "^1.0.0-alpha.44",
+    "vuepress": "^1.0.0-alpha.44"
+  }
+}
