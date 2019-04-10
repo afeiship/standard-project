@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>release | Standard project workflow</title>
+    <meta name="description" content="Standard project workflow">
+    <link rel="icon" href="http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg">
+    
+    <link rel="preload" href="/standard-project/assets/css/0.styles.55c4101c.css" as="style"><link rel="preload" href="/standard-project/assets/js/app.2c254d83.js" as="script"><link rel="preload" href="/standard-project/assets/js/2.f0e832d5.js" as="script"><link rel="preload" href="/standard-project/assets/js/14.64e81797.js" as="script"><link rel="prefetch" href="/standard-project/assets/js/10.0369cbc8.js"><link rel="prefetch" href="/standard-project/assets/js/11.747849e2.js"><link rel="prefetch" href="/standard-project/assets/js/12.22fe1113.js"><link rel="prefetch" href="/standard-project/assets/js/13.25dc7373.js"><link rel="prefetch" href="/standard-project/assets/js/15.5bf3b68d.js"><link rel="prefetch" href="/standard-project/assets/js/3.ea7022fb.js"><link rel="prefetch" href="/standard-project/assets/js/4.75ae620a.js"><link rel="prefetch" href="/standard-project/assets/js/5.cedbd267.js"><link rel="prefetch" href="/standard-project/assets/js/6.39469836.js"><link rel="prefetch" href="/standard-project/assets/js/7.e3448407.js"><link rel="prefetch" href="/standard-project/assets/js/8.a228192c.js"><link rel="prefetch" href="/standard-project/assets/js/9.970833fb.js">
+    <link rel="stylesheet" href="/standard-project/assets/css/0.styles.55c4101c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/standard-project/" class="home-link router-link-active"><!----> <span class="site-name">Standard project workflow</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Initial</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/standard-project/initial/001-create-branch.html" class="sidebar-link">create branch</a></li><li><a href="/standard-project/initial/002-master.html" class="sidebar-link">master branch</a></li><li><a href="/standard-project/initial/003-develop.html" class="sidebar-link">develop</a></li><li><a href="/standard-project/initial/004-feature.html" class="sidebar-link">feature</a></li><li><a href="/standard-project/initial/005-release.html" class="sidebar-link">realease</a></li><li><a href="/standard-project/initial/006-hotfix.html" class="sidebar-link">hotfix</a></li><li><a href="/standard-project/initial/007-release-vs-tag.html" class="sidebar-link">release vs tag</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Scripts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/standard-project/scripts/001-initial.html" class="sidebar-link">intial</a></li><li><a href="/standard-project/scripts/002-release.html" class="active sidebar-link">release</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/standard-project/scripts/002-release.html#build-commit-in-local" class="sidebar-link">build &amp; commit in local</a></li><li class="sidebar-sub-header"><a href="/standard-project/scripts/002-release.html#pull-release-in-remote" class="sidebar-link">pull &amp; release in remote</a></li><li class="sidebar-sub-header"><a href="/standard-project/scripts/002-release.html#optimize" class="sidebar-link">optimize</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="release"><a href="#release" aria-hidden="true" class="header-anchor">#</a> release</h1> <h2 id="build-commit-in-local"><a href="#build-commit-in-local" aria-hidden="true" class="header-anchor">#</a> build &amp; commit in local</h2> <div class="language-shell extra-class"><pre class="language-text"><code># empty release branch:
+git checkout release
+rm -rf dist
+git add --all
+git commit -m &quot;remove: release empty&quot;
+git push
+
+# build in your feature branch, will update version number.
+git checkout feature/babel7#fei
+npm run dll &amp;&amp; npm run build:test
+git add --all
+git commit -m &quot;add: release build&quot;
+git push
+
+# swith to release branch &amp; commit new release
+git checkout -f
+git checkout release
+git add --all
+git commit -m &quot;add: new release&quot;
+git push
+
+# switch to your branch
+git checkout feature/babel7#fei
+</code></pre></div><h2 id="pull-release-in-remote"><a href="#pull-release-in-remote" aria-hidden="true" class="header-anchor">#</a> pull &amp; release in remote</h2> <div class="language-shell extra-class"><pre class="language-text"><code>ssh test@12.23.23.43
+cd /data/standard-project
+git pull
+</code></pre></div><h2 id="optimize"><a href="#optimize" aria-hidden="true" class="header-anchor">#</a> optimize</h2> <ol><li>清空原来的，发布，合并成一个 <code>commit</code></li> <li>提交的 <code>commit</code> 带一个 <code>version</code></li> <li><code>webpack banner</code> 里带上，当前的 <code>git hash</code> 和上次的 <code>git hash</code> 方便 <code>rollback</code></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/standard-project/scripts/001-initial.html" class="prev">
+          intial
+        </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/standard-project/assets/js/app.2c254d83.js" defer></script><script src="/standard-project/assets/js/2.f0e832d5.js" defer></script><script src="/standard-project/assets/js/14.64e81797.js" defer></script>
+  </body>
+</html>
