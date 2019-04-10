@@ -15,9 +15,24 @@ module.exports = {
   themeConfig: {
     sidebar: [
       {
-        title: 'Get started',
+        title: 'Initial',
         collapsable: false,
-        children: ['/javascript/001-get-started.md']
+        children: [
+          '/initial/001-create-branch.md',
+          '/initial/002-master.md',
+          '/initial/003-develop.md',
+          '/initial/004-feature.md',
+          '/initial/005-hotfix.md',
+          '/initial/006-release-vs-tag.md',
+        ]
+      },
+      {
+        title: 'Scripts',
+        collapsable: false,
+        children: [
+          '/scripts/001-initial.md',
+          '/scripts/002-release.md',
+        ]
       }
     ]
   }

@@ -33,3 +33,8 @@ ssh test@12.23.23.43
 cd /data/standard-project
 git pull
 ```
+
+## optimize
+1. 清空原来的，发布，合并成一个 `commit`
+2. 提交的 `commit` 带一个 `version`
+3. `webpack banner` 里带上，当前的 `git hash` 和上次的 `git hash` 方便 `rollback`
