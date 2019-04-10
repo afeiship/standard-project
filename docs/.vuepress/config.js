@@ -22,8 +22,9 @@ module.exports = {
           '/initial/002-master.md',
           '/initial/003-develop.md',
           '/initial/004-feature.md',
-          '/initial/005-hotfix.md',
-          '/initial/006-release-vs-tag.md',
+          '/initial/005-release.md',
+          '/initial/006-hotfix.md',
+          '/initial/007-release-vs-tag.md',
         ]
       },
       {
