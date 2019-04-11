@@ -7,12 +7,12 @@
 
 ## release:
 1. build your project
-    ```shell
-    npm run build
-    git add --all
-    git commit -m "add: for build"
-    git push
-    ```
+  ```shell
+  npm run build
+  git add --all
+  git commit -m "add: for build"
+  git push
+  ```
 
 2. make release
   ```shell
