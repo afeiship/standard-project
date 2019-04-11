@@ -7,7 +7,7 @@
 
 ## release:
 
-  1. build your project
+1. build your project
     ```shell
     npm run build
     git add --all
@@ -21,7 +21,12 @@
   ```
 
 3. commit release
-
   ```shell
   rake stdapp:commit
+  ```
+
+4. release in remote
+  ```shell
+  cd /data/standard-project
+  git pull
   ```
