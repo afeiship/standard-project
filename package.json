@@ -20,12 +20,10 @@
     "clean-webpack-plugin": "^2.0.1",
     "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
+    "rake-git": "github:afeiship/rake-git",
     "rake-standard-project": "github:afeiship/rake-standard-project",
     "vuepress": "^1.0.0-alpha.44",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  },
-  "dependencies": {
-    "webpack-copy-after-build-plugin": "^1.0.1"
   }
 }
