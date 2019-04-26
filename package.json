@@ -12,7 +12,7 @@
     "start": "node ./server.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "./.bin/deploy.sh"
+    "docs:deploy": "./bin/deploy.sh"
   },
   "license": "MIT",
   "devDependencies": {
