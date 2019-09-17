@@ -1,0 +1,29 @@
+{
+  "name": "standard-project",
+  "version": "1.0.1",
+  "description": "Standard project workflow.",
+  "homepage": "https://github.com/afeiship/standard-project",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p",
+    "start": "node ./server.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "./bin/deploy.sh"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/core": "^1.0.0-alpha.44",
+    "clean-webpack-plugin": "^2.0.1",
+    "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
+    "rake-git": "github:afeiship/rake-git",
+    "rake-standard-project": "github:afeiship/rake-standard-project",
+    "vuepress": "^1.0.0-alpha.44",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
