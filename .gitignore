@@ -3,8 +3,12 @@ bower_components
 coverage
 npm-debug.log
 yarn.lock
-package-lock.json
+yarn-error.log
 .DS_Store
 .idea
 .vscode
 dist
+*.tar.gz
+*.zip
+Gemfile.lock
+report.*.json
