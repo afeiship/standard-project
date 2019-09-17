@@ -1,2 +1,12 @@
 node_modules
+bower_components
+coverage
+npm-debug.log
+yarn.lock
+yarn-error.log
+Gemfile.lock
+.DS_Store
 .idea
+.vscode
+dist
+*.tar.gz
