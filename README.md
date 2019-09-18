@@ -4,7 +4,7 @@
 ## docs
 - https://afeiship.github.io/standard-project/
 
-## release:
+## release
 1. build your project
   ```shell
   npm run build
@@ -29,3 +29,6 @@
   cd /data/standard-project
   git pull
   ```
+
+## todos
+- 一个 latest 的分支，保存最近一个 production 的 release
