@@ -31,4 +31,4 @@
   ```
 
 ## todos
-- 一个 latest 的分支，保存最近一个 production 的 release
+- [ ]一个 latest 的分支，保存最近一个 production 的 release
