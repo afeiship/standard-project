@@ -32,3 +32,4 @@
 
 ## todos
 - [ ]一个 latest 的分支，保存最近一个 production 的 release
+- [ ] 需要将最新的代码，合并到 master 分支上去
